@@ -1,0 +1,1115 @@
+/* App.css */
+body {
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #000;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  height: 100vh;
+  padding: 3.9rem 2.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Footer copyright - appears on all pages */
+.footer-copyright {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  color: white;
+  opacity: 0.2;
+  z-index: 999;
+  text-align: center;
+  font-weight: 300;
+}
+
+/* Header left container - logo and company name */
+.header-left {
+  position: absolute;
+  top: 34px;
+  left: 48px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+/* Logo styling */
+.logo-image {
+  height: 50px;
+  width: auto;
+}
+
+/* Company name - update positioning since it's now in flex container */
+.company-name {
+  color: rgba(255, 255, 255, 0.282);
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Background Video Styles - Add this to your App.css */
+
+/* Video background container */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: blur(6px); /* Adjust blur amount - try values between 2px-8px */
+}
+
+/* Optional: Add a dark overlay to make text more readable */
+.video-background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Adjust opacity as needed */
+  z-index: 1;
+}
+
+/* Update your existing body styles */
+body {
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #000; /* Fallback color */
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure all page content appears above the video */
+.page {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  padding: 3.9rem 2.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Glassmorphism effect for pricing cards */
+.pricing-card {
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Soft shadow */
+}
+
+/* Glassmorphism for buttons */
+button {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Glassmorphism for input fields */
+input,
+textarea {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ===== HOME PAGE SPECIFIC STYLING ===== */
+.home-page {
+  justify-content: center;
+  height: 80vh;
+  padding: 5.1rem;
+}
+
+/* HOME PAGE - Large dramatic title */
+.home-page h1 {
+  font-size: 3.64rem;
+  font-weight: 700;
+  margin: 1rem 0 2rem 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* HOME PAGE - Large subtitle */
+.home-page p {
+  font-size: 2.34rem;
+  margin: 0 0 2.12rem 0;
+  opacity: 0.8;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+/* HOME PAGE - Large buttons */
+.home-page button {
+  padding: 2.34rem 5.2rem;
+  min-width: 473.2px;
+  margin-bottom: 1rem;
+}
+
+/* HOME PAGE - Large small text */
+.home-page small {
+  font-size: 1.3rem;
+  word-spacing: 0.2em;
+}
+
+/* ===== JOB INPUT PAGE SPECIFIC STYLING ===== */
+.job-page {
+  justify-content: center;
+  padding-top: 5.2rem;
+  height: 80vh;
+}
+
+/* Profile icon styling */
+.profile-icon {
+  width: 78px;
+  height: 78px;
+  background-color: #333;
+  border-radius: 50%;
+  margin-bottom: 5.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 31.2px;
+  color: #888;
+}
+
+/* JOB PAGE - Main title */
+.job-page h1 {
+  font-size: 3.9rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: white;
+}
+
+/* JOB PAGE - Subtitle */
+.job-page p {
+  font-size: 2.2rem;
+  margin: 0 0 3rem 0;
+  opacity: 0.8;
+  font-weight: 400;
+  letter-spacing: 0.097em;
+  color: white;
+}
+
+/* JOB PAGE - Input field and textarea */
+.job-page input,
+.job-page textarea {
+  width: 100%;
+  max-width: 751.4px;
+  padding: 2.6rem 2.6rem;
+  margin: 0 0 3.3rem 0;
+  background-color: transparent;
+  border: 2px solid #333;
+  border-radius: 32.5px;
+  color: white;
+  font-size: 1.43rem;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.job-page textarea {
+  height: 200px;
+  resize: none;
+}
+
+.job-page input::placeholder,
+.job-page textarea::placeholder {
+  color: #666;
+  font-style: italic;
+}
+
+.job-page input:focus,
+.job-page textarea:focus {
+  border-color: #555;
+}
+
+/* CONTINUE BUTTON - Fixed position bottom right for all pages */
+.continue-button {
+  position: fixed;
+  bottom: 39px;
+  right: 39px;
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 1.3rem 3.25rem;
+  border-radius: 32.5px;
+  font-weight: 600;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 5.2px 15.6px rgba(0, 0, 0, 0.3);
+}
+
+.continue-button:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2.6px);
+  box-shadow: 0 7.8px 20.8px rgba(0, 0, 0, 0.4);
+}
+
+/* JOB PAGE - Helper text */
+.job-page .helper-text {
+  font-size: 1.48rem;
+  margin: 0rem 0 2.8rem 0;
+  opacity: 0.3;
+  display: block;
+  word-spacing: 0.2em;
+}
+
+.job-page .helper-text.error {
+  color: #ff4444;
+  opacity: 1;
+}
+
+/* ===== INTERVIEW PAGE SPECIFIC STYLING ===== */
+.interview-page {
+  justify-content: center;
+  padding-top: 3.5rem;
+  height: 80vh;
+}
+
+/* INTERVIEW PAGE - Question title */
+.interview-page h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin: 0 0 0rem 0;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  color: white;
+}
+
+/* INTERVIEW PAGE - Question content */
+.interview-page .question-content {
+  font-size: 1.5rem;
+  margin: 0 0 1rem 0;
+  opacity: 0.8;
+  font-weight: 400;
+  color: white;
+}
+
+/* INTERVIEW PAGE - Larger camera box */
+.interview-page .camera-box {
+  border: 2px solid white;
+  padding: 4.5rem 13rem;
+  margin: 2rem 0;
+  width: 500px;
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 26px;
+}
+
+/* Job info display - bottom left */
+.job-info {
+  position: fixed;
+  bottom: 30px;
+  left: 39px;
+  color: white;
+  opacity: 0.6;
+  font-size: 1.17rem;
+  font-weight: 400;
+  word-spacing: 0.1em;
+  z-index: 1000;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* ===== DESCRIPTION PAGE SPECIFIC STYLING ===== */
+.description-page {
+  justify-content: center;
+  padding-top: 5.2rem;
+  height: 80vh;
+}
+
+/* DESCRIPTION PAGE - Main title */
+.description-page h1 {
+  font-size: 3.99rem;
+  font-weight: 700;
+  margin: 0 0 1.4rem 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: white;
+}
+
+/* DESCRIPTION PAGE - Subtitle */
+.description-page p {
+  font-size: 2.02rem;
+  margin: 0 0 3rem 0;
+  opacity: 0.8;
+  font-weight: 400;
+  letter-spacing: 0.097em;
+  color: white;
+}
+
+/* DESCRIPTION PAGE - Textarea */
+.description-page textarea {
+  width: 100%;
+  max-width: 751.4px;
+  padding: 2.6rem 2.6rem;
+  margin: 0 0 3.3rem 0;
+  background-color: transparent;
+  border: 2px solid #333;
+  border-radius: 32.5px;
+  color: white;
+  font-size: 1.43rem;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.3s ease;
+  height: 200px;
+  resize: none;
+}
+
+.description-page textarea::placeholder {
+  color: #666;
+  font-style: italic;
+}
+
+.description-page textarea:focus {
+  border-color: #555;
+}
+
+/* DESCRIPTION PAGE - Helper text */
+.description-page .helper-text {
+  font-size: 1.48rem;
+  margin: 0rem 0 2.8rem 0;
+  opacity: 0.3;
+  display: block;
+  word-spacing: 0.2em;
+}
+
+/* Job selection display - bottom left */
+.job-selection {
+  position: fixed;
+  bottom: 39px;
+  left: 39px;
+  color: white;
+  opacity: 0.6;
+  font-size: 1.17rem;
+  font-weight: 400;
+  z-index: 1000;
+}
+
+/* ===== PRICING PAGE SPECIFIC STYLING ===== */
+.pricing-page {
+  justify-content: flex-start;
+  padding-top: 5.2rem;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* PRICING PAGE - Main title */
+.pricing-page h1 {
+  font-size: 3.64rem;
+  font-weight: 700;
+  margin: 0 0 4rem 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: white;
+}
+
+/* Pricing cards container */
+.pricing-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Individual pricing card */
+.pricing-card {
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #333;
+  border-radius: 26px;
+  padding: 2.5rem 2rem;
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card:hover {
+  border-color: #555;
+  transform: translateY(-5px);
+}
+
+/* Featured card styling */
+.pricing-card.featured {
+  border-color: white;
+  transform: scale(1.05);
+}
+
+.pricing-card.featured:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+/* Featured badge */
+.featured-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: black;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Card title */
+.pricing-card h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: white;
+}
+
+/* Price styling */
+.price {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin: 0.5rem 0;
+}
+
+.price-period {
+  font-size: 1.1rem;
+  opacity: 0.7;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+/* Features list */
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+  text-align: left;
+  flex-grow: 1;
+}
+
+.features li {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  color: white;
+  opacity: 0.9;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+/* Card buttons */
+.pricing-card button {
+  width: 100%;
+  margin-top: auto;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+/* Featured card button */
+.pricing-card.featured button {
+  background-color: white;
+  color: black;
+}
+
+.pricing-card.featured button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .pricing-card {
+    max-width: 100%;
+  }
+
+  .pricing-card.featured {
+    transform: none;
+  }
+
+  .pricing-card.featured:hover {
+    transform: translateY(-5px);
+  }
+}
+
+/* ===== RESULTS PAGE SPECIFIC STYLING ===== */
+.results-page {
+  justify-content: flex-start;
+  padding-top: 5.2rem;
+  height: 100vh;
+}
+
+/* RESULTS PAGE - Main title with grade */
+.results-page h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0 0 4rem 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: white;
+  text-align: center;
+}
+
+/* Results content container */
+.results-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Individual result item */
+.result-item {
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.result-item h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: white;
+  margin: 0 0 0.5rem 0;
+  text-align: left;
+}
+
+.result-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f70000;
+  text-align: left;
+  text-shadow: 0 0 20px rgba(133, 0, 0, 0.3);
+}
+
+/* Email form styling */
+.email-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.email-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 1.5rem 2rem;
+  margin: 0 0 1rem 0;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 32.5px;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.email-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+
+.email-input:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.email-form button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 1.2rem 2.5rem;
+  border-radius: 32.5px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0;
+}
+
+.email-form button:hover:not(:disabled) {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.email-form button:disabled {
+  background-color: #4caf50;
+  color: white;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Pro user text */
+.pro-text {
+  font-size: 0.9rem;
+  color: white;
+  opacity: 0.3;
+  margin-top: 1rem;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Responsive design for results page */
+@media (max-width: 768px) {
+  .results-page h1 {
+    font-size: 2.5rem;
+  }
+
+  .result-item h3 {
+    font-size: 1.5rem;
+  }
+
+  .result-value {
+    font-size: 2rem;
+  }
+
+  .results-content {
+    padding: 0 1rem;
+  }
+}
+
+/* ===== SHARED ELEMENTS (apply to all pages) ===== */
+.home-button {
+  position: absolute;
+  top: 26px;
+  left: 39px;
+  color: white;
+  background: transparent;
+  border: 2px solid white;
+  padding: 7.8px 15.6px;
+  border-radius: 26px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.17rem;
+}
+
+/* Logo Home Button */
+.logo-home-button {
+  position: absolute;
+  top: 26px;
+  left: 39px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+.logo-home-button:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+.logo-image {
+  height: 90px;
+  width: auto;
+  display: block;
+}
+
+.back-button {
+  position: absolute;
+  top: 26px;
+  left: 176px;
+  color: white;
+  background: transparent;
+  border: 2px solid white;
+  padding: 7.8px 15.6px;
+  border-radius: 26px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.17rem;
+}
+
+/* ===== ENTERPRISE PAGE SPECIFIC STYLING ===== */
+.enterprise-page {
+  justify-content: flex-start;
+  padding-top: 3.2rem;
+  height: auto;
+  min-height: 100vh;
+  overflow-y: auto;
+  padding-bottom: 8rem;
+}
+
+.enterprise-hero {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.enterprise-page h1 {
+  font-size: 4.2rem;
+  font-weight: 700;
+  margin: 0 0 2.5rem 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: white;
+  background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.enterprise-subtitle {
+  font-size: 1.8rem;
+  margin: 0 0 2rem 0;
+  opacity: 0.85;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: white;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.enterprise-content {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.benefit-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.benefit-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.benefit-card:hover::before {
+  left: 100%;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.benefit-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  margin: 0 0 1rem 0;
+  line-height: 1.3;
+}
+
+.benefit-card p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.roi-section {
+  text-align: center;
+  margin: 4rem 0;
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.roi-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 3rem;
+  letter-spacing: -0.01em;
+}
+
+.roi-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.roi-stat {
+  text-align: center;
+}
+
+.roi-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #4caf50;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
+}
+
+.roi-label {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.enterprise-features {
+  margin: 4rem 0;
+}
+
+.enterprise-features h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+.features-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  color: white;
+  padding-left: 1rem;
+}
+
+.feature-check {
+  color: #4caf50;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  min-width: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .enterprise-page h1 {
+    font-size: 3rem;
+  }
+
+  .enterprise-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .roi-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .roi-number {
+    font-size: 2.5rem;
+  }
+
+  .enterprise-features h2,
+  .roi-section h2 {
+    font-size: 2rem;
+  }
+}
+
+.back-button:hover,
+.home-button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Default h1 (fallback) */
+h1 {
+  font-size: 3.25rem;
+  font-weight: 700;
+  margin: 0 0 1.95rem 0;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+/* Default h2 */
+h2 {
+  font-size: 2.6rem;
+  margin-bottom: 1.3rem;
+}
+
+/* Default paragraph (fallback) */
+p {
+  font-size: 1.43rem;
+  margin: 0.65rem 0 1.95rem 0;
+  opacity: 0.85;
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+input,
+textarea {
+  margin: 1.3rem 0;
+  padding: 1.3rem;
+  width: 80%;
+  max-width: 650px;
+  border: 1px solid #aaa;
+  border-radius: 19.5px;
+  background-color: transparent;
+  color: white;
+  font-size: 1.43rem;
+  text-align: center;
+}
+
+textarea {
+  height: 156px;
+}
+
+/* Default button styling */
+button {
+  margin-top: 1.95rem;
+  padding: 1.3rem 2.6rem;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 32.5px;
+  font-weight: 600;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* BUTTON GROUP - Only for home page */
+.button-group {
+  display: flex;
+  gap: 1.95rem;
+  margin: 0 0 2.6rem 0;
+  width: 100%;
+  max-width: 780px;
+  justify-content: center;
+}
+
+small {
+  font-size: 1.17rem;
+  margin-top: 0;
+  opacity: 0.6;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.camera-box {
+  position: relative; /* Add this to make absolute positioning work for REC indicator */
+  border: 2px solid white;
+  padding: 2.6rem;
+  margin: 2.6rem 0;
+  width: 390px;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 26px;
+}
+
+/* Add this anywhere in your CSS file, preferably with the other interview page styles */
+.camera-box video {
+  transform: scaleX(-1);
+}
+
+.controls {
+  display: flex;
+  gap: 1.3rem;
+  align-items: center;
+  margin-top: 1.3rem;
+}

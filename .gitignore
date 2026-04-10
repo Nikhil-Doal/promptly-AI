@@ -1,0 +1,74 @@
+# ------------------------------
+# OS / editor files
+# ------------------------------
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+.idea/
+.vscode/
+
+# ------------------------------
+# Logs / runtime files
+# ------------------------------
+*.log
+*.out
+*.err
+*.pid
+
+# ------------------------------
+# Environment / secrets
+# ------------------------------
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# ------------------------------
+# Python (backend)
+# ------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging / build
+*.egg-info/
+.eggs/
+dist/
+build/
+pip-wheel-metadata/
+
+# ------------------------------
+# Node / React (frontend)
+# ------------------------------
+frontend/node_modules/
+frontend/.pnp
+frontend/.pnp.js
+
+frontend/build/
+frontend/coverage/
+
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*

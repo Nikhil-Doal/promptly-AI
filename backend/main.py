@@ -14,8 +14,10 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
 from deepface import DeepFace
 import cv2
 import numpy as np
+from dotenv import load_dotenv
+load_dotenv()
 
-genai.configure(api_key="AIzaSyCMazzHaOeCXlv8P-78pJzdHLGi8syeYg0")
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 VIDEO_PATH = r"backend\video.mp4"

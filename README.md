@@ -1,5 +1,5 @@
 # Promptly AI
-![title](images\image1.png)
+![title](images/image1.png)
 
 ## Inspiration
 We’re a group of high school grads about to start university and we’ve already seen how brutal it is trying to land co-ops and side jobs. Everyone’s applying left and right, but in all that chaos, most forget to actually prepare for interviews. We realized it’s not just us, tons of students are going through the same cycle: apply, wait, repeat without ever improving their interview confidence or skills. That’s what inspired us to build Promptly, something to help people actually get better at interviews while applying for them.
@@ -16,7 +16,7 @@ Users simply input a job title and optional description, and Promptly runs a ful
 
 The report includes a transcript, confidence/emotion breakdowns, a smart grade, and practical advice, even ideal answers based on the job role. It’s everything a candidate needs to improve and walk into interviews with confidence.
 
-![choose plan](images\image2.jpg)
+![choose plan](images/image2.jpg)
 
 ## How we built it
 We used React.js and CSS to build a clean, responsive frontend. The backend runs on Python Flask, handling interview sessions, media processing, and API calls. For AI-driven feedback, we integrated the Gemini API to analyze verbal responses. The entire pipeline connects smoothly, from capturing user input to generating a report, thanks to Flask’s flexibility and React’s speed.
